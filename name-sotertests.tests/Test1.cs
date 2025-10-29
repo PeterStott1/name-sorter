@@ -11,6 +11,7 @@ namespace name_sotertests.tests
         {
             string[] args = { "D:\\Source\\repos\\name-sorter\\name-sorter\\files\\unsorted-name-list.txt" };
             name_sorter.Program.Main(args);
+            Assert.IsTrue(File.Exists(args[0]));
         }
     }
 }
