@@ -1,8 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.ComponentModel;
-
+﻿
 
 
 namespace name_sorter
@@ -24,7 +20,7 @@ namespace name_sorter
                 string text =  reader.ReadToEnd();
                 var orderedNames = OrderNameItems(text.Split("\r\n"));
                 WriteToFile(orderedNames, outputFilePath);
-                // Using StreamWriter to write each line
+            
                 foreach (var nameDict in orderedNames)
                 {
                     Console.WriteLine($"{nameDict["FirstName"]} {nameDict["MiddleName"]} {nameDict["LastName"]}");
