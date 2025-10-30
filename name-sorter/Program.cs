@@ -34,7 +34,7 @@ namespace name_sorter
                 Console.WriteLine(ex.Message);
             }
         }
-        static void WriteToFile(List<Dictionary<string, string>> orderedNames, string outputFilePath)
+        public static void WriteToFile(List<Dictionary<string, string>> orderedNames, string outputFilePath)
         {  // Using StreamWriter to write each line
             using (StreamWriter writer = new StreamWriter(outputFilePath))
             {
@@ -44,7 +44,7 @@ namespace name_sorter
                 }
             }
         }
-        static List<Dictionary<string, string>> OrderNameItems(string[] textArr)
+        public static List<Dictionary<string, string>> OrderNameItems(string[] textArr)
         {
             // Split names into a dictionary
             List<Dictionary<string, string>> nameDictionaries = textArr.Select(name =>
